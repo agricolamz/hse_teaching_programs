@@ -5,7 +5,6 @@
 	SmallCapsFont={Brill},
 	SmallCapsFeatures={Letters=SmallCaps}]{Brill}
 \usepackage{alltt}
-\usepackage{indentfirst}
 \usepackage{geometry} % Простой способ задавать поля
 	\geometry{top=25mm}
 	\geometry{bottom=20mm}
@@ -32,114 +31,59 @@
 {0pt}{2ex plus 0ex minus .2ex}{0ex plus .2ex}
 \titlespacing*{\subsubsection}
 {0pt}{2ex plus 0ex minus .2ex}{0ex plus .2ex}
+\usepackage{sectsty}
+\sectionfont{\centering}
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand \thesubsection{\arabic{section}.\arabic{subsection}}
 
-\title{Instrumental Phonetics}
-\author{George Moroz, Inna Sieber}
-\date{}
 \begin{document}
-\maketitle
-\section{Course Description}
-\subsection{Title of a Course}
-\textit{Instrumental Phonetics} is a course for 1st-year Master’s students of the National Research University Higher School of Economics.
-\subsection{Pre-requisites}
-The course establishes some demands on students’ skills in spoken and written English, some knowledge of Articulatory phonetics, and some basics of R programming languages (runing scripts, uploading .csv files, installing and loading libraries).
-\subsection{Course Type}
-\textit{Instrumental Phonetics} is a Сompulsory Course for Master’s programme ‘Linguistic Theory and Language Description’.
-\subsection{Abstract}
-
-\section{Learning Objectives}
-\noindent Learning objectives of the course `Instrumental Phonetics' are to introduce students to:
-\begin{itemize}
-\item theoretical apparatus, key notions, and main principles of articulation and acoustic phonetics;
-\item  the logic of articulation and acoustic analysis of sounds patterns of languages;
-\item instrumental methods of the phonetic analysis (including  computer programing);
-\item critical thinking and reasoning within articulation and acoustic analysis.
-\end{itemize}
-
-\section{Learning Outcomes}
-\noindent After completing the study of the discipline `Instrumental Phonetics' students should:
-\begin{itemize}
-\item understand the principles of articulation and acoustic phonetics
-\item be able to read and critically assess current phonetic literature;
-\item be able to make empirical observations and theoretical generalizations;
-\item to apply their knowledge of the essentials of Instrumental Phonetics to various research problems in both Phonetics and Phonology. 
-\end{itemize}
-
-\section{Course Plan}
-\begin{enumerate}
-\item Wave characteristics, spectrogram, oscilogram
-\item Vowels and articulatory phonetics related to them. Formants. Tube model
-\item Sonorants
-\item Obstruents
-\item Spectrum analysis
-\item Prosody: stress, tones, pitch
-\item Methods of phonetic investigation: palatography, MRI, electrography, laryngoscopy, etc.
-\item Perceptional phonetics
-\item Speech recognition and synthesis
-\item Phonological and phonetic description durig fieldwork
-\end{enumerate}
-\section{Reading List}
-\subsection{Required}
-\begin{enumerate}
-\item  Ashby, P. Understanding phonetics / P. Ashby. – London: Hodder Education, 2011. – 230 с. – (Understanding language series) .  ISBN 978-0-340-92827-1.
-\item  Ladefoged, P. A course in phonetics / P. Ladefoged, K. Johnson. – 6th ed. – Belmont: Wadsworth Cengage Learning, 2011. – 322 с. + CD-ROM.  ISBN 978-1-428-23127-6.
-\end{enumerate}
-\subsection{Optional}
-\begin{enumerate}
-\item  Above and beyond the segments: experimental linguistics and phonetics / Ed. by J. Caspers [et al.]. – Amsterdam; Philadelphia: John Benjamins Publishing Company, 2014. – 363 с.  ISBN 978-90-272-1216-0.
-\item  Davenport, M. Introducing phonetics and phonology / M. Davenport, S. J. Hannahs. – 3rd ed. – London: Hodder Education, 2010. – 255 с.  ISBN 978-1-444-10988-7. 
-\item  Sweet, H. A handbook of phonetics: including a popular exposition of the principles of spelling reform / H. Sweet. – Cambridge [etc.]: Cambridge University Press, 2013. – 215 с. – (Cambridge library collection) .  ISBN 978-1-10-806228-2.
-\item  O'Grady, G. Key concepts in phonetics and phonology / G. O'Grady. – New York: Palgrave Macmillan, 2013. – 174 с. – (Palgrave key concepts) .  ISBN 978-0-230-27647-5.
-\item  The Bloomsbury companion to phonetics / Ed. by M. J. Jones, R.-A. Knight. – London; New York; New Delhi: Bloomsbury, 2013. – 314 с. – (Bloomsbury companions) .  ISBN 978-1-441-14606-9.
-\item  Zsiga, E. C. The sounds of language: an introduction to phonetics and phonology / E. C. Zsiga. – Chichester: Wiley-Blackwell, 2013. – 474 с. – (Linguistics in the world) .  ISBN 978-1-405-19103-6.
-\item  Baayen, R. H. Analyzing linguistic data: a practical introduction to statistics using R / R. H. Baayen. – Cambridge [etc.]: Cambridge University Press, 2014. – 353 с. ISBN 978-0-521-70918-7.
-\end{enumerate}
-\section{Grading System}
-\noindent 
 \begin{center}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{Type of work} & \textbf{Characteristics} &  \\ \hline
-Homework assignments  &  3 & Annotating and annolising audio data. \\ \hline
-Exam & 1 & Solving the theoretical problemes, programming and data analisys \\ \hline
-\end{tabular}
+{\Large Программа дисциплины <<Анализ данных для лингвистов>>}
 \end{center}
-
-During all types of assignments students have to demonstrate their demonstrate their acquaintance with the spectral characteristics of differend acoustic signals and ability to annotate and annalise acoustic data using computer programs such as Praat and R.
-
-\section{Guidelines for Knowledge Assessment}
-Cumulative grade for the student's work during the module is the mean scores for homework assignments. The assessment  consists of final assessment  is the final exam. Final course mark  is obtained from the following formula:
-$$ \mbox{Final Mark} = 0.6 \times \mbox{(Cumulative Grade)} + 0.4 \times \mbox{(Exam)}$$
-\par The grades are rounded to the nearest integer. All grading scales are summed up in following table:\\
-\noindent
-\begin{center}
-\begin{tabular}{|l|l|c|}
-\hline
-\multicolumn{2}{|c|}{Grading Scale} &  \\ \cline{ 1- 2}
-ten-point & five-point & \\  \hline
-1 --- very bad & \multirow{3}{*}{2 --- no pass} & \multirow{3}{*}{FAIL} \\ \cline{ 1- 1}
-2 --- bad  & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 1}
-3 --- no pass & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \hline
-4 --- pass & \multirow{2}{*}{3 --- pass} & \multirow{6}{*}{PASS} \\ \cline{ 1- 1}
-5 --- highly pass & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 2}
-6 --- good & \multirow{2}{*}{4 --- good} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 1}
-7 --- very good &  & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 2}
-8 --- almost excellent & \multirow{3}{*}{5 --- excellent} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 1}
-9 --- excellent & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 1}
-10 --- perfect & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \hline
+\begin{flushright}
+\begin{tabular}{l}
+Утверждена                          \\
+Академическим советом ОП            \\
+Протокол № 15 от  «28» июня 2018 г.
 \end{tabular}
-\end{center}
-\section{Methods of Instruction}
-The following educational technologies are used in the study process:
+\end{flushright}
+\begin{tabular}{|l|l|}
+\hline
+Автор                         & Г. А. Мороз                    \\ \hline
+Число кредитов                & 3                              \\ \hline
+Контактная работа (час.)      & 36                             \\ \hline
+Самостоятельная работа (час.) & 78                             \\ \hline
+Курс                          & 3, 4                            \\ \hline
+Формат изучения дисциплины    & без использования онлайн-курса \\ \hline
+\end{tabular}
+\section{ЦЕЛЬ И РЕЗУЛЬТАТЫ ОСВОЕНИЯ ДИСЦИПЛИНЫ}
+Задачей курса <<Анализ данных для лингвистов>> является продолжение знакомства с различными методами анализа данных. Курс разделен на несколько тематических блоков: первый связан с применением байесовских статистических методов (байесовский апдейт, байесовский доверительный интервал, байесовский фактор, байесовкская эмпирическая оценка), второй связан с методами уменьшения размерности (PCA, LDA, CA, MCA), третий блок связан с методами кластеризации (k-means, иерархическая кластеризация, смешанные модели) и последний блок будет посвящен проблемам применения регрессионного анализа (регрессия со смешанными эффектами, обобщённая аддитивная модель).
+\section{СОДЕРЖАНИЕ УЧЕБНОЙ ДИСЦИПЛИНЫ}
+\begin{enumerate}
+\item работа с разными распределениями
+\item байесовские статистические методы
+\item кластеризация и смешанные модели
+\item уменьшение размерности
+\item проблемы применения регрессионного анализа
+\end{enumerate}
+\section{ОЦЕНИВАНИЕ}
+Итоговая оценка складывается из следующих компонентов:
 \begin{itemize}
-\item classic lectures
-\item seminar could be as following:
+\item текущий контроль домашнего чтения с весом 40\%,
+\item экзамен с весом 60\%, в том числе дополнительная задача на оценку выше 8.
+\end{itemize}
+Текущий контроль складывается из оценок за контрольные работы и зачета в конце четвертого модуля. Результирующая оценка выставляется по следующей формуле:
+$$O_\textnormal{итоговый} = 0.6 \times O_\textnormal{экзамен} + 0.4 \times O_\textnormal{текущий контроль}$$
+Способ округления накопленной оценки промежуточного (итогового) контроля в форме зачета: арифметический.
+\section{ПРИМЕРЫ ОЦЕНОЧНЫХ СРЕДСТВ}
 \begin{itemize}
-\item some scientific problem solution using computer programs
-\item group discussion and analysis of the results of home readed scientific articles
-\item group work on some recording and analysing technics such as recoreder and headset usage, palatography practice and so on
+\item Посчитайте значение правдоподобия распределения $\mathcal{N}(\mu = 22,\, \sigma^{2}=6)$ для двух наблюдений 57 и 43.
+\item Проведите байесовский апдейт данных $Beta(11, 34)$, используя априорное распределение $Beta(23, 45)$, и посчитайте симметричный 95\% байесовский доверильный интервал и 95\% интервал максимальной плотности.
 \end{itemize}
-\end{itemize}
-\section{Special Equipment and Software Support}
-The course requires a laptop, projector, and acoustic systems. Durig the seminars all students should be equiped with laptop and computer programs R and Praat (both are available under the GNU General Public License).
+\section{РЕСУРСЫ}
+\subsection{Основная литература}
+\subsection{Дополнительная литература}
+\subsection{Программное обеспечение}
+\subsection{Профессиональные базы данных, информационные справочные системы, интернет-ресурсы (электронные образовательные ресурсы)}
+\subsection{Материально-техническое обеспечение дисциплины}
 \end{document}
