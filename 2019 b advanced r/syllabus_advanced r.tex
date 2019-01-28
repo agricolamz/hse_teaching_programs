@@ -1,0 +1,145 @@
+\documentclass[a4paper]{article}
+\usepackage{fontspec}      %% подготавливает загрузку шрифтов Open Type, True Type и др.
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
+\setmainfont[Ligatures={TeX,Historic},
+	SmallCapsFont={Brill},
+	SmallCapsFeatures={Letters=SmallCaps}]{Brill}
+\usepackage{alltt}
+\usepackage{indentfirst}
+\usepackage{geometry} % Простой способ задавать поля
+	\geometry{top=25mm}
+	\geometry{bottom=20mm}
+	\geometry{left=25mm}
+	\geometry{right=20mm}
+	\geometry{headsep=25mm}
+\usepackage{setspace} % Интерлиньяж
+\onehalfspacing % Интерлиньяж 1.5
+%\doublespacing % Интерлиньяж 2
+%\singlespacing % Интерлиньяж 1
+%\usepackage{natbib}
+%\bibpunct[: ]{[}{]}{;}{a}{}{,}
+\usepackage{enumitem}
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+\usepackage{multicol} % Несколько колонок
+
+\setlist{nosep}
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{2ex plus 0ex minus .2ex}{0ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{2ex plus 0ex minus .2ex}{0ex plus .2ex}
+\titlespacing*{\subsubsection}
+{0pt}{2ex plus 0ex minus .2ex}{0ex plus .2ex}
+
+\title{Instrumental Phonetics}
+\author{George Moroz, Inna Sieber}
+\date{}
+\begin{document}
+\maketitle
+\section{Course Description}
+\subsection{Title of a Course}
+\textit{Instrumental Phonetics} is a course for 1st-year Master’s students of the National Research University Higher School of Economics.
+\subsection{Pre-requisites}
+The course establishes some demands on students’ skills in spoken and written English, some knowledge of Articulatory phonetics, and some basics of R programming languages (runing scripts, uploading .csv files, installing and loading libraries).
+\subsection{Course Type}
+\textit{Instrumental Phonetics} is a Сompulsory Course for Master’s programme ‘Linguistic Theory and Language Description’.
+\subsection{Abstract}
+
+\section{Learning Objectives}
+\noindent Learning objectives of the course `Instrumental Phonetics' are to introduce students to:
+\begin{itemize}
+\item theoretical apparatus, key notions, and main principles of articulation and acoustic phonetics;
+\item  the logic of articulation and acoustic analysis of sounds patterns of languages;
+\item instrumental methods of the phonetic analysis (including  computer programing);
+\item critical thinking and reasoning within articulation and acoustic analysis.
+\end{itemize}
+
+\section{Learning Outcomes}
+\noindent After completing the study of the discipline `Instrumental Phonetics' students should:
+\begin{itemize}
+\item understand the principles of articulation and acoustic phonetics
+\item be able to read and critically assess current phonetic literature;
+\item be able to make empirical observations and theoretical generalizations;
+\item to apply their knowledge of the essentials of Instrumental Phonetics to various research problems in both Phonetics and Phonology. 
+\end{itemize}
+
+\section{Course Plan}
+\begin{enumerate}
+\item Wave characteristics, spectrogram, oscilogram
+\item Vowels and articulatory phonetics related to them. Formants. Tube model
+\item Sonorants
+\item Obstruents
+\item Spectrum analysis
+\item Prosody: stress, tones, pitch
+\item Methods of phonetic investigation: palatography, MRI, electrography, laryngoscopy, etc.
+\item Perceptional phonetics
+\item Speech recognition and synthesis
+\item Phonological and phonetic description durig fieldwork
+\end{enumerate}
+\section{Reading List}
+\subsection{Required}
+\begin{enumerate}
+\item  Ashby, P. Understanding phonetics / P. Ashby. – London: Hodder Education, 2011. – 230 с. – (Understanding language series) .  ISBN 978-0-340-92827-1.
+\item  Ladefoged, P. A course in phonetics / P. Ladefoged, K. Johnson. – 6th ed. – Belmont: Wadsworth Cengage Learning, 2011. – 322 с. + CD-ROM.  ISBN 978-1-428-23127-6.
+\end{enumerate}
+\subsection{Optional}
+\begin{enumerate}
+\item  Above and beyond the segments: experimental linguistics and phonetics / Ed. by J. Caspers [et al.]. – Amsterdam; Philadelphia: John Benjamins Publishing Company, 2014. – 363 с.  ISBN 978-90-272-1216-0.
+\item  Davenport, M. Introducing phonetics and phonology / M. Davenport, S. J. Hannahs. – 3rd ed. – London: Hodder Education, 2010. – 255 с.  ISBN 978-1-444-10988-7. 
+\item  Sweet, H. A handbook of phonetics: including a popular exposition of the principles of spelling reform / H. Sweet. – Cambridge [etc.]: Cambridge University Press, 2013. – 215 с. – (Cambridge library collection) .  ISBN 978-1-10-806228-2.
+\item  O'Grady, G. Key concepts in phonetics and phonology / G. O'Grady. – New York: Palgrave Macmillan, 2013. – 174 с. – (Palgrave key concepts) .  ISBN 978-0-230-27647-5.
+\item  The Bloomsbury companion to phonetics / Ed. by M. J. Jones, R.-A. Knight. – London; New York; New Delhi: Bloomsbury, 2013. – 314 с. – (Bloomsbury companions) .  ISBN 978-1-441-14606-9.
+\item  Zsiga, E. C. The sounds of language: an introduction to phonetics and phonology / E. C. Zsiga. – Chichester: Wiley-Blackwell, 2013. – 474 с. – (Linguistics in the world) .  ISBN 978-1-405-19103-6.
+\item  Baayen, R. H. Analyzing linguistic data: a practical introduction to statistics using R / R. H. Baayen. – Cambridge [etc.]: Cambridge University Press, 2014. – 353 с. ISBN 978-0-521-70918-7.
+\end{enumerate}
+\section{Grading System}
+\noindent 
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Type of work} & \textbf{Characteristics} &  \\ \hline
+Homework assignments  &  3 & Annotating and annolising audio data. \\ \hline
+Exam & 1 & Solving the theoretical problemes, programming and data analisys \\ \hline
+\end{tabular}
+\end{center}
+
+During all types of assignments students have to demonstrate their demonstrate their acquaintance with the spectral characteristics of differend acoustic signals and ability to annotate and annalise acoustic data using computer programs such as Praat and R.
+
+\section{Guidelines for Knowledge Assessment}
+Cumulative grade for the student's work during the module is the mean scores for homework assignments. The assessment  consists of final assessment  is the final exam. Final course mark  is obtained from the following formula:
+$$ \mbox{Final Mark} = 0.6 \times \mbox{(Cumulative Grade)} + 0.4 \times \mbox{(Exam)}$$
+\par The grades are rounded to the nearest integer. All grading scales are summed up in following table:\\
+\noindent
+\begin{center}
+\begin{tabular}{|l|l|c|}
+\hline
+\multicolumn{2}{|c|}{Grading Scale} &  \\ \cline{ 1- 2}
+ten-point & five-point & \\  \hline
+1 --- very bad & \multirow{3}{*}{2 --- no pass} & \multirow{3}{*}{FAIL} \\ \cline{ 1- 1}
+2 --- bad  & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 1}
+3 --- no pass & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \hline
+4 --- pass & \multirow{2}{*}{3 --- pass} & \multirow{6}{*}{PASS} \\ \cline{ 1- 1}
+5 --- highly pass & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 2}
+6 --- good & \multirow{2}{*}{4 --- good} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 1}
+7 --- very good &  & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 2}
+8 --- almost excellent & \multirow{3}{*}{5 --- excellent} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 1}
+9 --- excellent & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \cline{ 1- 1}
+10 --- perfect & \multicolumn{1}{c|}{} & \multicolumn{ 1}{c|}{} \\ \hline
+\end{tabular}
+\end{center}
+\section{Methods of Instruction}
+The following educational technologies are used in the study process:
+\begin{itemize}
+\item classic lectures
+\item seminar could be as following:
+\begin{itemize}
+\item some scientific problem solution using computer programs
+\item group discussion and analysis of the results of home readed scientific articles
+\item group work on some recording and analysing technics such as recoreder and headset usage, palatography practice and so on
+\end{itemize}
+\end{itemize}
+\section{Special Equipment and Software Support}
+The course requires a laptop, projector, and acoustic systems. Durig the seminars all students should be equiped with laptop and computer programs R and Praat (both are available under the GNU General Public License).
+\end{document}
