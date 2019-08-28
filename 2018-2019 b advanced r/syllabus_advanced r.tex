@@ -1,0 +1,116 @@
+\documentclass[a4paper]{article}
+\usepackage{fontspec}      %% подготавливает загрузку шрифтов Open Type, True Type и др.
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
+\setmainfont[Ligatures={TeX,Historic},
+	SmallCapsFont={Brill},
+	SmallCapsFeatures={Letters=SmallCaps}]{Brill}
+\usepackage{alltt}
+\usepackage{geometry} % Простой способ задавать поля
+	\geometry{top=25mm}
+	\geometry{bottom=20mm}
+	\geometry{left=25mm}
+	\geometry{right=20mm}
+	\geometry{headsep=25mm}
+\usepackage{setspace} % Интерлиньяж
+\onehalfspacing % Интерлиньяж 1.5
+%\doublespacing % Интерлиньяж 2
+%\singlespacing % Интерлиньяж 1
+%\usepackage{natbib}
+%\bibpunct[: ]{[}{]}{;}{a}{}{,}
+\usepackage{enumitem}
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+\usepackage{multicol} % Несколько колонок
+
+\setlist{nosep}
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{2ex plus 0ex minus .2ex}{0ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{2ex plus 0ex minus .2ex}{0ex plus .2ex}
+\titlespacing*{\subsubsection}
+{0pt}{2ex plus 0ex minus .2ex}{0ex plus .2ex}
+\usepackage{sectsty}
+\sectionfont{\centering}
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand \thesubsection{\arabic{section}.\arabic{subsection}}
+
+\begin{document}
+\begin{center}
+{\Large Программа дисциплины <<Анализ данных для лингвистов>>}
+\end{center}
+\begin{flushright}
+\begin{tabular}{l}
+Утверждена                          \\
+Академическим советом ОП            \\
+Протокол № 15 от  «28» июня 2018 г.
+\end{tabular}
+\end{flushright}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Автор                         & Г. А. Мороз                    \\ \hline
+Число кредитов                & 3                              \\ \hline
+Контактная работа (час.)      & 36                             \\ \hline
+Самостоятельная работа (час.) & 78                             \\ \hline
+Курс                          & 3, 4                            \\ \hline
+Формат изучения дисциплины    & без использования онлайн-курса \\ \hline
+\end{tabular}
+\end{center}
+\section{ЦЕЛЬ И РЕЗУЛЬТАТЫ ОСВОЕНИЯ ДИСЦИПЛИНЫ}
+Задачей курса <<Анализ данных для лингвистов>> является продолжение знакомства с различными методами анализа данных. Курс разделен на несколько тематических блоков: первый связан с применением байесовских статистических методов (байесовский апдейт, байесовский доверительный интервал, байесовский фактор, байесовкская эмпирическая оценка), второй связан с методами уменьшения размерности (PCA, LDA, CA, MCA), третий блок связан с методами кластеризации (k-means, иерархическая кластеризация, смешанные модели) и последний блок будет посвящен проблемам применения регрессионного анализа (регрессия со смешанными эффектами, обобщённая аддитивная модель).
+\section{СОДЕРЖАНИЕ УЧЕБНОЙ ДИСЦИПЛИНЫ}
+\begin{enumerate}
+\item Работа с распределениями
+\item Байесовские статистические методы
+\item Кластеризация и смешанные модели
+\item Уменьшение размерности
+\item Проблемы применения регрессионного анализа
+\end{enumerate}
+\section{ОЦЕНИВАНИЕ}
+Результирующая оценка выставляется по следующей формуле:
+$$O_\textnormal{итоговая} = 0.4 \times O_\textnormal{экзамен}+0.6 \times O_\textnormal{накопленная}$$
+Оценка за курс складывается из оценок за домашние работы ($O_\textnormal{накопленная}$), экзамен ($O_\textnormal{экзамен}$), а также дополнительный балл ($O_\textnormal{дополнительный балл}$), который присуждается студенту, первым указавшим на ошибку в формуле оценивания. Способ округления всех оценок: арифметический.
+\section{ПРИМЕРЫ ОЦЕНОЧНЫХ СРЕДСТВ}
+\begin{itemize}
+\item Посчитайте значение правдоподобия распределения $\mathcal{N}(\mu = 22,\, \sigma^{2}=6)$ для двух наблюдений 57 и 43.
+\item Проведите байесовский апдейт данных $Beta(11, 34)$, используя априорное распределение $Beta(23, 45)$, и посчитайте симметричный 95\% байесовский доверильный интервал и 95\% интервал максимальной плотности.
+\end{itemize}
+\section{РЕСУРСЫ}
+\subsection{Основная литература}
+\begin{itemize}
+\item Albert, J. Bayesian computation with R / J. Albert. – 2nd ed. – Heidelberg; Dordrecht; London; New York: Springer, 2009. – 298 с. – (Use R!) . ISBN 978-0-387-92297-3.
+\item  Fox, J. An R companion to applied regression / J. Fox, S. Weisberg. – 2nd ed. – Los Angeles [etc.]: SAGE Publications, 2011. – 449 с. ISBN 978-1-412-97514-8. 
+\end{itemize} 
+\subsection{Дополнительная литература}
+\begin{itemize}
+\item Greenacre, M. Correspondence analysis in practice / M. Greenacre. – 2nd ed. – Boca Raton; London; New York: Chapman \& Hall/CRC, 2007. – 280 с. – (Interdisciplinary statistics series) - ISBN 978-1-584-88616-7. 
+\item  Doing Bayesian data analysis: a tutorial with R, JAGS, and Stan / J. K. Kruschke. – 2nd ed. – Amsterdam [etc.]: Elsevier, 2015. – 759 с. ISBN 978-0-12-405888-0. 
+\item  Gries, S. T. Statistics for linguistics with R: a practical introduction / S. T. Gries. – 2nd rev. ed. – Berlin; Boston: De Gruyter Mouton, 2013. – 359 с. ISBN 978-3-11-030728-3.
+\item  Gries S. T. Ten lectures on quantitative approaches in cognitive linguistics: corpus-linguistic, experimental, and statistical applications / S. T. Gries. – Leiden; Boston: Brill, 2017. – 211 c. – (Distinguished lectures in cognitive linguistics) . ISBN 9789004336216. 
+\end{itemize}
+\subsection{Программное обеспечение}
+\begin{tabular}{|l|l|l|}
+\hline
+№ п/п &	Наименование	& Условия доступа \\ \hline
+1	& R &	Свободно распространяемое ПО \\ \hline
+2	& Rstudio &	Свободно распространяемое ПО \\ \hline
+\end{tabular}
+\subsection{Профессиональные базы данных, информационные справочные системы, интернет-ресурсы (электронные образовательные ресурсы)}
+
+\begin{tabular}{|l|l|l|}
+\hline
+№ п/п &	Наименование	& Условия доступа \\ \hline
+1	& Страница курса &	https://agricolamz.github.io/2019\_data\_analysis\_for\_linguists/ \\ \hline
+2	& Introduction to attractor landscapes &	https://ncase.me/attractors/\\ \hline
+\end{tabular}
+
+\subsection{Материально-техническое обеспечение дисциплины}
+Учебные аудитории для лекционных занятий по дисциплине обеспечивают использование и демонстрацию тематических иллюстраций, соответствующих программе дисциплины в составе:
+\begin{itemize}
+\item ПЭВМ с доступом в Интернет (операционная система, офисные программы, антивирусные программы);
+\item мультимедийный проектор с дистанционным управлением.
+\end{itemize}
+Учебные аудитории для лабораторных и самостоятельных занятий по дисциплине оснащены ­­­­­­­­­­­­­­­­­­­­­­­­ ПЭВМ, с возможностью подключения к сети Интернет и доступом к электронной информационно-образовательной среде НИУ ВШЭ.  
+\end{document}
